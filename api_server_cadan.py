@@ -24,7 +24,7 @@ DB_CONFIG = {
 }
 
 # Diretório onde seus EXEs estão no SERVIDOR.
-DIRETORIO_DOS_EXE_SERVIDOR = r"C:\Users\JEFFCONTABIL\Documents\BASE\Base_exe"
+DIRETORIO_DOS_EXE_SERVIDOR = "/app/Base_exe"  # Render Linux path
 
 # ==============================================================================
 # FUNÇÕES AUXILIARES
@@ -421,4 +421,5 @@ def check_db_schema():
 if __name__ == '__main__':
     check_db_schema()
     print(f"🚀 Iniciando API na porta 5000...")
+
     serve(app, host='0.0.0.0', port=5000, threads=10)
